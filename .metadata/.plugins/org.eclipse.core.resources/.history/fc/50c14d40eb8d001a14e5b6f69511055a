@@ -1,0 +1,5 @@
+package com.stackroute.auth.model;
+
+public class User {
+
+}

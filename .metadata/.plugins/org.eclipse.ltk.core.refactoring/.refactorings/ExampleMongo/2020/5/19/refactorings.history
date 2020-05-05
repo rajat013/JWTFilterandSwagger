@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;MyFilter.java&apos; to &apos;ExampleJPA/src/main/java/com.stackroute.jpa&apos;&#x0D;&#x0A;- Original project: &apos;ExampleMongo&apos;&#x0D;&#x0A;- Destination element: &apos;ExampleJPA/src/main/java/com.stackroute.jpa&apos;&#x0D;&#x0A;- Original element: &apos;com.stackroute.ecom.filter.MyFilter.java&apos;" description="Copy compilation unit" destination="=ExampleJPA/src\/main\/java&lt;com.stackroute.jpa" element1="/src\/main\/java&lt;com.stackroute.ecom.filter{MyFilter.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1588657193469" units="1" version="1.0"/>
+</session>

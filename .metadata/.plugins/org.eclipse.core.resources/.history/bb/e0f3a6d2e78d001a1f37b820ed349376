@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql
+    network_mode: host
+    container_name: mysqlcont
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_UST_URL: jdbc:mysql://localhost:3306/demodb?createDatabaseIfNotExist=true&user=root&password=password
+      
+  ustjpapp:
+    image: maryrani/ustmysqlimg
+    network_mode: host
+    container_name: ustcont
+    depends_on:
+      - mysql
+      - mongo
+    restart: always
+    ports:
+      - 9091:9091
+
+  mongo:
+    image: mongo:3.4-jessie
+    network_mode: host
+    container_name: mongocont
+    ports:
+      - 27017:27017
+    environment:
+      my_mongo_url: mongodb://localhost:27017/demodb
+      
+  myfrontend:
+    image: maryrani/angular
+    network_mode: host
+    container_name: angucont
+    ports:
+      - 8080:8080
+      
+ 
+     

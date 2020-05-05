@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  mysql:
+    image: mysql
+    network_mode: host
+    container_name: mysqlcont
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_UST_URL: jdbc:mysql://localhost:3306/demodb?createDatabaseIfNotExist=true&user=root&password=password
+      
+  ustjpapp:
+    image: ustmysqlimg
+    network_mode: host
+    container_name: ustcont
+    depends_on:
+      - mysql
+    restart: always
+    ports:
+      - 9091:9091
+
+     

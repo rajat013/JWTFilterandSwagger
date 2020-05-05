@@ -1,0 +1,23 @@
+package com.stackroute.auth.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.stackroute.auth.model.User;
+
+public class UserInterImpl implements UserInter {
+
+	@Autowired
+	UserRepo repo;
+	@Override
+	public User saveUser(User obj) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean loginUser(String uname, String password) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

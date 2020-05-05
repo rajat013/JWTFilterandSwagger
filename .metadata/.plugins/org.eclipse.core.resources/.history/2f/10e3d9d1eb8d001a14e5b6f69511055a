@@ -1,0 +1,5 @@
+package com.stackroute.auth.service;
+
+public class UserInterImpl {
+
+}
